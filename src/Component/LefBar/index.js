@@ -1,6 +1,7 @@
-import { Container, makeStyles, Typography } from '@material-ui/core'
-import { ArrowForward, BarChartRounded, ExitToApp, Home, Person } from '@material-ui/icons';
+import { Container, Typography } from '@mui/material'
+import { makeStyles } from '@mui/styles';
 import React from 'react'
+import { BarChartOutlined, ExitToAppOutlined, HomeOutlined, Person } from '@mui/icons-material';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,13 +13,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
     backgroundColor: "#4a148c",
     color: "white",
-    position:"sticky",
+    position:"sticky !important",
     top:0,
     [theme.breakpoints.up("md")]: {
       backgroundColor: 'white',
       color: "#555",
       border: "1px solid #607d8b"
-    }
+    },
+    [theme.breakpoints.down("md")]:{
+      backgroundColor:"purple !important"
+  }
   },
   item: {
     display: "flex",
@@ -47,11 +51,9 @@ const useStyles = makeStyles((theme) => ({
 export const LeftBar = (props) => {
   const classes = useStyles();
   return (
-
-    
       <Container className={classes.container}>
         <div className={classes.item}>
-          <Home className={classes.icon} />
+          <HomeOutlined className={classes.icon} />
           <Typography className={classes.text}>Home</Typography>
         </div>
         <div className={classes.item}>
@@ -59,19 +61,19 @@ export const LeftBar = (props) => {
           <Typography className={classes.text}>Category</Typography>
         </div>
         <div className={classes.item}>
-          <Home className={classes.icon} />
+          <HomeOutlined className={classes.icon} />
           <Typography className={classes.text}>Product</Typography>
         </div>
         <div className={classes.item}>
-          <Home className={classes.icon} />
+          <HomeOutlined className={classes.icon} />
           <Typography className={classes.text}>Orders</Typography>
         </div>
         <div className={classes.item}>
-          <BarChartRounded className={classes.icon} />
+          <BarChartOutlined className={classes.icon} />
           <Typography className={classes.text}>Statistics</Typography>
         </div>
         <div className={classes.item}>
-          <ExitToApp className={classes.icon} />
+          <ExitToAppOutlined className={classes.icon} />
           <Typography className={classes.text}>Logout</Typography>
         </div>
 

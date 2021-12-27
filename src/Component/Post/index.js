@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, CardActionArea,CardMedia, CardContent,Typography,CardActions,Button, makeStyles} from '@material-ui/core'
-import PostImage from "../../images/image1.jpg"
+import { Card, CardActionArea,CardMedia, CardContent,Typography,CardActions,Button} from '@material-ui/core'
+import PostImage from "../../images/image1.jpg";
+import {makeStyles} from '@mui/styles';
 
 const useStyles = makeStyles((theme)=>({
    media:{

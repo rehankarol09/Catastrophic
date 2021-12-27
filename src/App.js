@@ -1,40 +1,39 @@
-import { Grid, makeStyles } from '@material-ui/core'
-import React from 'react'
-import { NavBar } from './Components/NavBar';
-import {LeftBar} from './Components/LetfBar'
-import {RightBar} from './Components/RightBar'
-import {FeedBar} from './Components/Feed'
-import "./App.css"
-import { Add } from './Components/Add';
+import React from "react";
+import {NavBar} from './Component/Navbar';
+import {LeftBar} from './Component/LefBar'
+import {RightBar} from './Component/RightBar'
+import {FeedBar} from './Component/FeedBar'
+import {Grid} from '@mui/material';
+import {makeStyles} from '@mui/styles';
+import './App.css'
+import { Add } from "./Component/Add";
 
-const useStyles=makeStyles((theme)=>({
+const useStyles = makeStyles((theme)=>({
   right:{
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
       display:"none"
-    }
+    },
   }
+
 }))
-export const App = (props) => {
+export const App = () => {
   const classes = useStyles();
   return (
     <>
-    <div>
-    <NavBar />
-       <Grid container>
+    <NavBar/>
+    <Grid container>
            <Grid item sm={2} xs={2}>
              <LeftBar/>
            </Grid>
-           <Grid Grid item sm={7} xs={10}>
+           <Grid grid="true" item sm={7} xs={10}>
               <FeedBar/>
            </Grid>
-           <Grid Grid item sm={3} className={classes.right}>
+           <Grid grid="true" item sm={3} className={classes.right}>
            <RightBar/>
            </Grid>
        </Grid>
-       <Add/>
-    </div>
-     
-       
+      <Add/>
+
     </>
 
   )

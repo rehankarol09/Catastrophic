@@ -1,5 +1,5 @@
-import { Avatar, Container, makeStyles, Typography,ImageList,ImageListItem,Divider,Link } from '@material-ui/core';
-import { AvatarGroup } from '@material-ui/lab';
+import { Avatar, Container,Typography,ImageList,ImageListItem,Divider,Link ,AvatarGroup } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
