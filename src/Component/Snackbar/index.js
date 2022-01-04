@@ -15,15 +15,12 @@ export default function CustomizedSnackbars(props) {
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
-      <Button variant="outlined" onClick={props.handleClick}>
-        Open success snackbar
-      </Button>
-      <Snackbar open={props.openAlert} autoHideDuration={6000} onClose={props.handleClose}>
+      
+      <Snackbar open={props.openAlert} autoHideDuration={4000} onClose={props.handleClose}>
         <Alert onClose={props.handleClose} severity="success" sx={{ width: '100%' }}>
           This is a success message!
         </Alert>
       </Snackbar>
-      <Alert severity="success">This is a success message!</Alert>
     </Stack>
   );
 }
